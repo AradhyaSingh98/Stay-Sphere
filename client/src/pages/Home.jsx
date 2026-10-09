@@ -49,32 +49,32 @@ function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-[#FAF6EF]">
 
       {/* ================= HERO ================= */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-purple-800 via-violet-700 to-indigo-900 px-6 pb-24 pt-20 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#1E1813] via-[#4A3426] to-[#967854] px-6 pb-24 pt-20 text-white">
 
         {/* Background decorations */}
-        <div className="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
-        <div className="absolute -bottom-32 right-0 h-96 w-96 rounded-full bg-purple-400/20 blur-3xl" />
+        <div className="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-[#E8DCCB]/10 blur-3xl" />
+        <div className="absolute -bottom-32 right-0 h-96 w-96 rounded-full bg-[#B69A78]/25 blur-3xl" />
 
         <div className="relative mx-auto max-w-7xl">
 
           {/* Hero text */}
           <div className="text-center">
 
-            <div className="mb-6 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm font-bold backdrop-blur">
+            <div className="mb-6 inline-flex items-center rounded-full border border-[#E8DCCB]/30 bg-[#E8DCCB]/10 px-5 py-2 text-sm font-bold text-[#E8DCCB] backdrop-blur">
               ✨ Find your next unforgettable stay
             </div>
 
             <h1 className="text-5xl font-black leading-tight tracking-tight sm:text-6xl lg:text-7xl">
               Your world.
-              <span className="block text-purple-200">
+              <span className="block text-[#D8C5AE]">
                 Your stay.
               </span>
             </h1>
 
-            <p className="mx-auto mt-6 max-w-2xl text-lg font-medium leading-8 text-purple-100 sm:text-xl">
+            <p className="mx-auto mt-6 max-w-2xl text-lg font-medium leading-8 text-[#E8DCCB] sm:text-xl">
               Discover beautiful homes, apartments and unique stays
               across amazing destinations.
             </p>
@@ -84,13 +84,13 @@ function Home() {
           {/* ================= SEARCH BOX ================= */}
           <form
             onSubmit={handleSearch}
-            className="mx-auto mt-12 max-w-6xl rounded-[2rem] bg-white p-3 shadow-2xl"
+            className="mx-auto mt-12 max-w-6xl rounded-[2rem] bg-[#FFFCF7] p-3 shadow-2xl shadow-black/40"
           >
             <div className="grid gap-2 lg:grid-cols-5">
 
               {/* Destination */}
-              <div className="rounded-2xl px-5 py-3 transition hover:bg-gray-50">
-                <label className="block text-xs font-black uppercase tracking-wide text-gray-500">
+              <div className="rounded-2xl px-5 py-3 transition hover:bg-[#F0E7DA]">
+                <label className="block text-xs font-black uppercase tracking-wide text-[#967854]">
                   Where
                 </label>
 
@@ -99,13 +99,13 @@ function Home() {
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
                   placeholder="Search destinations"
-                  className="mt-1 w-full bg-transparent text-sm font-bold text-gray-900 outline-none placeholder:text-gray-400"
+                  className="mt-1 w-full bg-transparent text-sm font-bold text-[#302B26] outline-none placeholder:text-[#A39787]"
                 />
               </div>
 
               {/* Check in */}
-              <div className="rounded-2xl px-5 py-3 transition hover:bg-gray-50">
-                <label className="block text-xs font-black uppercase tracking-wide text-gray-500">
+              <div className="rounded-2xl px-5 py-3 transition hover:bg-[#F0E7DA]">
+                <label className="block text-xs font-black uppercase tracking-wide text-[#967854]">
                   Check-in
                 </label>
 
@@ -113,13 +113,13 @@ function Home() {
                   type="date"
                   value={checkIn}
                   onChange={(e) => setCheckIn(e.target.value)}
-                  className="mt-1 w-full bg-transparent text-sm font-bold text-gray-900 outline-none"
+                  className="mt-1 w-full bg-transparent text-sm font-bold text-[#302B26] outline-none"
                 />
               </div>
 
               {/* Check out */}
-              <div className="rounded-2xl px-5 py-3 transition hover:bg-gray-50">
-                <label className="block text-xs font-black uppercase tracking-wide text-gray-500">
+              <div className="rounded-2xl px-5 py-3 transition hover:bg-[#F0E7DA]">
+                <label className="block text-xs font-black uppercase tracking-wide text-[#967854]">
                   Check-out
                 </label>
 
@@ -127,13 +127,13 @@ function Home() {
                   type="date"
                   value={checkOut}
                   onChange={(e) => setCheckOut(e.target.value)}
-                  className="mt-1 w-full bg-transparent text-sm font-bold text-gray-900 outline-none"
+                  className="mt-1 w-full bg-transparent text-sm font-bold text-[#302B26] outline-none"
                 />
               </div>
 
               {/* Guests */}
-              <div className="rounded-2xl px-5 py-3 transition hover:bg-gray-50">
-                <label className="block text-xs font-black uppercase tracking-wide text-gray-500">
+              <div className="rounded-2xl px-5 py-3 transition hover:bg-[#F0E7DA]">
+                <label className="block text-xs font-black uppercase tracking-wide text-[#967854]">
                   Guests
                 </label>
 
@@ -143,7 +143,7 @@ function Home() {
                   value={guests}
                   onChange={(e) => setGuests(e.target.value)}
                   placeholder="Add guests"
-                  className="mt-1 w-full bg-transparent text-sm font-bold text-gray-900 outline-none placeholder:text-gray-400"
+                  className="mt-1 w-full bg-transparent text-sm font-bold text-[#302B26] outline-none placeholder:text-[#A39787]"
                 />
               </div>
 
@@ -151,7 +151,7 @@ function Home() {
               <div className="flex items-center">
                 <button
                   type="submit"
-                  className="flex w-full items-center justify-center gap-2 rounded-2xl bg-purple-700 px-6 py-5 font-black text-white transition hover:bg-purple-800 hover:shadow-lg"
+                  className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[#967854] px-6 py-5 font-black text-white transition hover:bg-[#302B26] hover:shadow-lg"
                 >
                   <span className="text-lg">🔍</span>
                   Search
@@ -161,13 +161,13 @@ function Home() {
             </div>
 
             {/* Budget */}
-            <div className="mt-2 border-t border-gray-100 px-5 pt-3">
-              <label className="block text-xs font-black uppercase tracking-wide text-gray-500">
+            <div className="mt-2 border-t border-[#E7DED2] px-5 pt-3">
+              <label className="block text-xs font-black uppercase tracking-wide text-[#967854]">
                 Maximum budget per night
               </label>
 
               <div className="mt-1 flex items-center gap-2">
-                <span className="font-bold text-gray-700">₹</span>
+                <span className="font-bold text-[#766D63]">₹</span>
 
                 <input
                   type="number"
@@ -175,7 +175,7 @@ function Home() {
                   value={maxPrice}
                   onChange={(e) => setMaxPrice(e.target.value)}
                   placeholder="Any budget"
-                  className="w-full max-w-xs bg-transparent text-sm font-bold text-gray-900 outline-none placeholder:text-gray-400"
+                  className="w-full max-w-xs bg-transparent text-sm font-bold text-[#302B26] outline-none placeholder:text-[#A39787]"
                 />
               </div>
             </div>
@@ -191,15 +191,15 @@ function Home() {
 
           <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
             <div>
-              <p className="text-sm font-black uppercase tracking-widest text-purple-600">
+              <p className="text-sm font-black uppercase tracking-widest text-[#967854]">
                 Explore India
               </p>
 
-              <h2 className="mt-2 text-3xl font-black text-gray-900">
+              <h2 className="mt-2 text-3xl font-black text-[#302B26]">
                 Popular destinations
               </h2>
 
-              <p className="mt-2 font-medium text-gray-500">
+              <p className="mt-2 font-medium text-[#766D63]">
                 Start exploring some of our most popular places.
               </p>
             </div>
@@ -219,17 +219,17 @@ function Home() {
                 key={destination}
                 type="button"
                 onClick={() => handleDestination(destination)}
-                className="group rounded-3xl border border-gray-200 bg-white p-5 text-left shadow-sm transition hover:-translate-y-1 hover:border-purple-200 hover:shadow-lg"
+                className="group rounded-3xl border border-[#E7DED2] bg-[#FFFCF7] p-5 text-left shadow-sm transition hover:-translate-y-1 hover:border-[#B69A78] hover:shadow-lg"
               >
                 <div className="text-4xl transition group-hover:scale-110">
                   {icon}
                 </div>
 
-                <p className="mt-4 font-black text-gray-900">
+                <p className="mt-4 font-black text-[#302B26]">
                   {destination}
                 </p>
 
-                <p className="mt-1 text-sm font-medium text-gray-500">
+                <p className="mt-1 text-sm font-medium text-[#766D63]">
                   Explore stays
                 </p>
               </button>
@@ -240,19 +240,19 @@ function Home() {
       </section>
 
       {/* ================= WHY STAYSPHERE ================= */}
-      <section className="bg-white px-6 py-16">
+      <section className="bg-[#FFFCF7] px-6 py-16">
         <div className="mx-auto max-w-7xl">
 
           <div className="text-center">
-            <p className="text-sm font-black uppercase tracking-widest text-purple-600">
+            <p className="text-sm font-black uppercase tracking-widest text-[#967854]">
               Why StaySphere?
             </p>
 
-            <h2 className="mt-2 text-3xl font-black text-gray-900 sm:text-4xl">
+            <h2 className="mt-2 text-3xl font-black text-[#302B26] sm:text-4xl">
               Everything you need for a better stay
             </h2>
 
-            <p className="mx-auto mt-4 max-w-2xl font-medium leading-7 text-gray-500">
+            <p className="mx-auto mt-4 max-w-2xl font-medium leading-7 text-[#766D63]">
               From discovering the right property to making a booking,
               StaySphere makes the entire experience simple.
             </p>
@@ -261,17 +261,17 @@ function Home() {
           <div className="mt-12 grid gap-6 md:grid-cols-3">
 
             {/* Card 1 */}
-            <div className="rounded-3xl border border-gray-100 bg-gray-50 p-8 transition hover:-translate-y-1 hover:shadow-xl">
+            <div className="rounded-3xl border border-[#E7DED2] bg-[#FAF6EF] p-8 transition hover:-translate-y-1 hover:shadow-xl">
 
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-100 text-3xl">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F0E7DA] text-3xl">
                 🏠
               </div>
 
-              <h3 className="mt-6 text-xl font-black text-gray-900">
+              <h3 className="mt-6 text-xl font-black text-[#302B26]">
                 Quality Stays
               </h3>
 
-              <p className="mt-3 font-medium leading-7 text-gray-600">
+              <p className="mt-3 font-medium leading-7 text-[#766D63]">
                 Explore comfortable homes, apartments and unique
                 properties for short and long stays.
               </p>
@@ -279,17 +279,17 @@ function Home() {
             </div>
 
             {/* Card 2 */}
-            <div className="rounded-3xl border border-gray-100 bg-gray-50 p-8 transition hover:-translate-y-1 hover:shadow-xl">
+            <div className="rounded-3xl border border-[#E7DED2] bg-[#FAF6EF] p-8 transition hover:-translate-y-1 hover:shadow-xl">
 
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-100 text-3xl">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#E8DCCB] text-3xl">
                 🔍
               </div>
 
-              <h3 className="mt-6 text-xl font-black text-gray-900">
+              <h3 className="mt-6 text-xl font-black text-[#302B26]">
                 Smart Search
               </h3>
 
-              <p className="mt-3 font-medium leading-7 text-gray-600">
+              <p className="mt-3 font-medium leading-7 text-[#766D63]">
                 Search by destination, budget and number of guests
                 to quickly find the right property.
               </p>
@@ -297,17 +297,17 @@ function Home() {
             </div>
 
             {/* Card 3 */}
-            <div className="rounded-3xl border border-gray-100 bg-gray-50 p-8 transition hover:-translate-y-1 hover:shadow-xl">
+            <div className="rounded-3xl border border-[#E7DED2] bg-[#FAF6EF] p-8 transition hover:-translate-y-1 hover:shadow-xl">
 
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-violet-100 text-3xl">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#EADBC4] text-3xl">
                 🤖
               </div>
 
-              <h3 className="mt-6 text-xl font-black text-gray-900">
+              <h3 className="mt-6 text-xl font-black text-[#302B26]">
                 AI Recommendations
               </h3>
 
-              <p className="mt-3 font-medium leading-7 text-gray-600">
+              <p className="mt-3 font-medium leading-7 text-[#766D63]">
                 Future-ready personalized recommendations powered
                 by machine learning.
               </p>
@@ -320,13 +320,13 @@ function Home() {
 
       {/* ================= CTA ================= */}
       <section className="px-6 py-16">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-gradient-to-r from-purple-700 to-indigo-800 px-8 py-14 text-center text-white shadow-xl">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-gradient-to-r from-[#302B26] to-[#6B4A32] px-8 py-14 text-center text-white shadow-xl">
 
           <h2 className="text-3xl font-black sm:text-4xl">
             Ready to find your next stay?
           </h2>
 
-          <p className="mx-auto mt-4 max-w-xl font-medium leading-7 text-purple-100">
+          <p className="mx-auto mt-4 max-w-xl font-medium leading-7 text-[#E8DCCB]">
             Browse our collection of properties and discover
             a place that feels like home.
           </p>
@@ -334,7 +334,7 @@ function Home() {
           <button
             type="button"
             onClick={() => navigate('/properties')}
-            className="mt-8 rounded-2xl bg-white px-8 py-4 font-black text-purple-700 transition hover:bg-purple-50 hover:shadow-lg"
+            className="mt-8 rounded-2xl bg-[#FFFCF7] px-8 py-4 font-black text-[#302B26] transition hover:bg-[#F0E7DA] hover:shadow-lg"
           >
             Explore Properties →
           </button>
@@ -347,4 +347,3 @@ function Home() {
 }
 
 export default Home
-

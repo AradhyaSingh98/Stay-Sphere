@@ -1,1 +1,47 @@
 @import "tailwindcss";
+:root {
+--bg-main: #FAF7F0;
+--bg-card: #FFFFFF;
+--primary: #B69A78;
+--primary-hover: #967854;
+--secondary: #E8DCCB;
+--text-main: #302B26;
+--text-muted: #766D63;
+--border-color: #E7DED2;
+--input-bg: #FFFCF7;
+}
+
+body {
+background: var(--bg-main);
+color: var(--text-main);
+}
+
+button {
+transition: background-color 0.2s ease;
+}
+
+input, select, textarea {
+background-color: var(--input-bg);
+color: var(--text-main);
+border-color: var(--border-color);
+}
+
+input:focus, select:focus, textarea:focus {
+outline-color: var(--primary);
+}
+
+.navbar {
+background-color: #FFFCF7;
+border-bottom: 1px solid var(--border-color);
+}
+
+.property-card {
+background-color: #FFFFFF;
+border: 1px solid var(--border-color);
+border-radius: 16px;
+}
+
+::selection {
+background: var(--secondary);
+color: var(--text-main);
+}
