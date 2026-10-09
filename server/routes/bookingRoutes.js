@@ -3,7 +3,7 @@ const express = require('express')
 const {
   createBooking,
   getMyBookings,
-} = require('../controllers/bookingController')
+} =require('../Controllers/bookingController')
 
 const protect = require('../middleware/authMiddleware')
 
