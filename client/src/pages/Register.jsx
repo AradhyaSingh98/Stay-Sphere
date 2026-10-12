@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
 
 function Register() {
@@ -10,6 +11,8 @@ function Register() {
 
   const [message, setMessage] = useState('')
   const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
+  const navigate = useNavigate()
 
   const handleChange = (e) => {
     setFormData({
@@ -20,9 +23,9 @@ function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-
     setMessage('')
     setError('')
+    setLoading(true)
 
     try {
       const response = await axios.post(
@@ -30,17 +33,25 @@ function Register() {
         formData
       )
 
-      setMessage(response.data.message)
-
+      setMessage(response.data.message || 'Registration successful! Redirecting to login...')
+      
       setFormData({
         name: '',
         email: '',
         password: '',
       })
-    } catch (error) {
+
+      // Redirect to login page smoothly after 1.5 seconds
+      setTimeout(() => {
+        navigate('/login')
+      }, 1500)
+
+    } catch (err) {
       setError(
-        error.response?.data?.message || 'Registration failed'
+        err.response?.data?.message || 'Registration failed'
       )
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -71,6 +82,7 @@ function Register() {
               value={formData.name}
               onChange={handleChange}
               placeholder="Enter your full name"
+              required
               className="w-full rounded-2xl border border-purple-100 px-4 py-3 font-medium outline-none transition focus:border-purple-500 focus:ring-2 focus:ring-purple-100"
             />
           </div>
@@ -86,6 +98,7 @@ function Register() {
               value={formData.email}
               onChange={handleChange}
               placeholder="Enter your email"
+              required
               className="w-full rounded-2xl border border-purple-100 px-4 py-3 font-medium outline-none transition focus:border-purple-500 focus:ring-2 focus:ring-purple-100"
             />
           </div>
@@ -101,15 +114,17 @@ function Register() {
               value={formData.password}
               onChange={handleChange}
               placeholder="Create a password"
+              required
               className="w-full rounded-2xl border border-purple-100 px-4 py-3 font-medium text-gray-900 outline-none transition focus:border-purple-500 focus:ring-2 focus:ring-purple-100"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full rounded-full bg-purple-700 px-6 py-3 font-extrabold text-white transition hover:bg-purple-800"
+            disabled={loading}
+            className="w-full rounded-full bg-purple-700 px-6 py-3 font-extrabold text-white transition hover:bg-purple-800 disabled:opacity-50"
           >
-            Create Account
+            {loading ? 'Creating Account...' : 'Create Account'}
           </button>
 
         </form>
@@ -128,12 +143,12 @@ function Register() {
 
         <p className="mt-6 text-center font-medium text-gray-600">
           Already have an account?{' '}
-          <a
-            href="/login"
+          <Link
+            to="/login"
             className="font-extrabold text-purple-700 hover:text-purple-900"
           >
             Login
-          </a>
+          </Link>
         </p>
 
       </div>
